@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "nome": "Portfólio IBMEC",
+        "imagem": "src/imagens/Simeutestei.png",
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre."
+    },
+    {
+        "id": 1,
+        "nome": "Projeto 2",
+        "imagem": "src/imagens/Simeutestei.png",
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre."
+    },
+    {
+        "id": 2,
+        "nome": "Projeto 3",
+        "imagem": "src/imagens/Simeutestei.png",
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre."
+    },
+    {
+        "id": 3,
+        "nome": "Projeto 4",
+        "imagem": "src/imagens/Simeutestei.png",
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre."
+    },
+    {
+        "id": 4,
+        "nome": "Projeto 5",
+        "imagem": "src/imagens/Simeutestei.png",
+        "desc": "Vai se foder"
+    },
+    {
+        "id": 5,
+        "nome": "Projeto 6",
+        "imagem": "src/imagens/Simeutestei.png",
+        "desc": "Não aguento mais"
+    }
+]

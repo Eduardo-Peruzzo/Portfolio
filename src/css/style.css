@@ -96,10 +96,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     width: 95%;
     margin: auto;
     margin-bottom: 10em;
-    gap: 15em;
+    gap: 5em;
     position: relative;
 }
 
@@ -110,17 +111,38 @@ body {
     border: 3px solid white;
     overflow: hidden;
     position: relative;
+    margin: auto;
+    cursor: pointer;
+    filter: blur(1px);
 }
 
 .projeto {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    opacity: 25%;
+    width: 20em;
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.35s;
+    filter: grayscale(100%);
+    position: relative;
 }
 
-.projeto.ativo {
+.projeto:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: transparent;
+}
+
+.projeto:hover {
+    filter: grayscale(0%) blur(0px);
     opacity: 1;
+    transform: scale(1);
+    z-index: 1;
 }
 
 .projeto>h3 {
@@ -133,65 +155,31 @@ body {
     height: 100%;
 }
 
-.imagem-desc>p {
+.desc {
     transition: 0.3s;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    width: 150%;
+    padding: 10px 10px;
+    border-radius: 10px;
     position: absolute;
-    left: 0;
-    top: 0;
+    top: 105%;
     text-align: center;
-    display: flex;
-    align-items: center;
     margin: 0;
     line-height: 25px;
     letter-spacing: 1px;
     font-size: 14px;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: #251135;
     opacity: 0;
-}
-
-.imagem-desc:hover p {
-    opacity: 1;
-}
-
-.seta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 35px;
     transition: 0.3s;
-    width: 100%;
-    height: 100%;
+    pointer-events: none;
+    transform: translateX(0) translateY(100px);
 }
 
-.btn-seta {
-    width: 4.5em;
-    height: 4.5em;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    z-index: 1;
+.projeto:hover .desc {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateX(0) translateY(0);
 }
 
-.esquerda {
-    position: absolute;
-    left: 20%;
-}
-
-.direita {
-    position: absolute;
-    right: 20%;
-}
-
-.btn-seta i:hover {
-    color: #9443d8;
-    border: 2px solid #9443d8;
-    transform: scale(1.2);
+.projeto:hover .imagem-desc {
+    filter: blur(0px);
 }
