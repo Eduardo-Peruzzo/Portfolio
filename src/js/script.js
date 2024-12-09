@@ -1,5 +1,5 @@
-let projetos;
-let projetosEmTela;
+let projetos
+let projetosEmTela
 
 const containerProjetos = document.querySelector(".projetos");
 
@@ -40,6 +40,8 @@ function criaDetalhes(id) {
     projetoFiltrado = projetos.filter((projeto) => projeto.id == id)
     projetoFiltrado = projetoFiltrado[0]
 
+    const blurOverlay = document.querySelector(".blur-overlay")
+
     const paginaProjeto = document.createElement("div")
     paginaProjeto.classList.add("pagina-projeto")
 
@@ -48,13 +50,19 @@ function criaDetalhes(id) {
     const img = document.createElement("img")
 
     const p = document.createElement("p")
+    const p2 = document.createElement("p")
+
+    const links = document.createElement("ul")
 
     const fechar = document.createElement("button")
 
     h1.innerHTML = projetoFiltrado.nome
     img.src = projetoFiltrado.imagem
-    p.innerHTML = projetoFiltrado.desc
+    p.innerHTML = projetoFiltrado.info
+    p2.innerHTML = "Links relacionados ao projeto:"
+    links.innerHTML = projetoFiltrado.links
     fechar.innerHTML = "x"
+
     fechar.onclick = () => {
         paginaProjeto.style.opacity = 0
         setTimeout(() => {
@@ -62,14 +70,26 @@ function criaDetalhes(id) {
             document.body.classList.remove("sem-scroll")
         }, 500);
 
-        const blurOverlay = document.querySelector(".blur-overlay");
-        blurOverlay.style.pointerEvents = "none";
-        blurOverlay.style.opacity = "0";
+        blurOverlay.style.pointerEvents = "none"
+        blurOverlay.style.opacity = "0"
+    }
+
+    blurOverlay.onclick = () => {
+        paginaProjeto.style.opacity = 0
+        setTimeout(() => {
+            document.body.removeChild(paginaProjeto)
+            document.body.classList.remove("sem-scroll")
+        }, 500);
+
+        blurOverlay.style.pointerEvents = "none"
+        blurOverlay.style.opacity = "0"
     }
 
     paginaProjeto.appendChild(h1)
     paginaProjeto.appendChild(img)
     paginaProjeto.appendChild(p)
+    paginaProjeto.appendChild(p2)
+    paginaProjeto.appendChild(links)
     paginaProjeto.appendChild(fechar)
 
     document.body.appendChild(paginaProjeto)
@@ -78,12 +98,12 @@ function criaDetalhes(id) {
         paginaProjeto.classList.add("animacao")
     }, 10);
 
-    const alturaPai = window.innerHeight;
-    const alturaElemento = paginaProjeto.offsetHeight;
+    const alturaPai = window.innerHeight
+    const alturaElemento = paginaProjeto.offsetHeight
 
-    const deslocamento = (alturaPai - alturaElemento) / 2;
+    const deslocamento = (alturaPai - alturaElemento) / 2
 
-    paginaProjeto.style.top = `${deslocamento}px`;
+    paginaProjeto.style.top = `${deslocamento}px`
 }
 
 function manipulaClick(evento) {
@@ -91,27 +111,26 @@ function manipulaClick(evento) {
 
     criaDetalhes(id)
     arrumaPosicao("pagina-projeto")
-    // Bloqueia o scroll no fundo
+
     document.body.classList.add("sem-scroll")
 
-    // Ativa o blur
-    const blurOverlay = document.querySelector(".blur-overlay");
-    blurOverlay.style.pointerEvents = "all";
-    blurOverlay.style.opacity = "1";
+    const blurOverlay = document.querySelector(".blur-overlay")
+    blurOverlay.style.pointerEvents = "all"
+    blurOverlay.style.opacity = "1"
 }
 
 function arrumaPosicao(classe) {
     const elementos = document.querySelectorAll(`.${classe}`)
 
     elementos.forEach((elemento) => {
-        const elementoPai = elemento.parentElement;
+        const elementoPai = elemento.parentElement
 
-        const larguraPai = elementoPai.offsetWidth;
-        const larguraElemento = elemento.offsetWidth;
+        const larguraPai = elementoPai.offsetWidth
+        const larguraElemento = elemento.offsetWidth
 
-        const deslocamento = (larguraPai - larguraElemento) / 2;
+        const deslocamento = (larguraPai - larguraElemento) / 2
 
-        elemento.style.left = `${deslocamento}px`;
+        elemento.style.left = `${deslocamento}px`
     })
 }
 

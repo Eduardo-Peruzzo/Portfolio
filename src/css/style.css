@@ -190,9 +190,8 @@ body.sem-scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 85%;
-    height: 85%;
+    width: 75%;
+    height: 75%;
     overflow-y: scroll;
     scrollbar-width: 1px;
     scroll-behavior: smooth;
@@ -201,6 +200,7 @@ body.sem-scroll {
     z-index: 5;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    box-shadow: 8px 8px 20px black;
 }
 
 .pagina-projeto.animacao {
@@ -219,7 +219,23 @@ body.sem-scroll {
 }
 
 .pagina-projeto img {
+    max-width: 60%;
+    border: 5px solid white;
+    border-style: ridge;
+}
+
+.pagina-projeto h1 {
+    font-size: 36px;
+}
+
+.pagina-projeto p {
     max-width: 90%;
+    font-size: 20px;
+}
+
+.pagina-projeto a {
+    font-size: 20px;
+    color: white;
 }
 
 .blur-overlay {
