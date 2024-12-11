@@ -1,5 +1,6 @@
 let projetos
 let projetosEmTela
+let intervaloCarrossel
 
 const containerProjetos = document.querySelector(".projetos");
 
@@ -30,7 +31,7 @@ function criaProjeto(projeto) {
     containerPrincipal.appendChild(p)
 
     containerSecundario.dataset.id = projeto.id
-    containerSecundario.onclick = manipulaClick
+    containerSecundario.onclick = abrirProjeto
 
     containerProjetos.appendChild(containerPrincipal)
 }
@@ -47,17 +48,20 @@ function criaDetalhes(id) {
 
     const h1 = document.createElement("h1")
 
-    const img = document.createElement("img")
+    let divCarrossel = document.createElement("div")
 
     const p = document.createElement("p")
+
     const p2 = document.createElement("p")
+    p2.classList.add("links")
 
     const links = document.createElement("ul")
 
     const fechar = document.createElement("button")
+    fechar.classList.add("fechar")
 
     h1.innerHTML = projetoFiltrado.nome
-    img.src = projetoFiltrado.imagem
+    divCarrossel = criaCarrossel(projetoFiltrado)
     p.innerHTML = projetoFiltrado.info
     p2.innerHTML = "Links relacionados ao projeto:"
     links.innerHTML = projetoFiltrado.links
@@ -70,6 +74,8 @@ function criaDetalhes(id) {
             document.body.classList.remove("sem-scroll")
         }, 500);
 
+        clearInterval(intervaloCarrossel)
+
         blurOverlay.style.pointerEvents = "none"
         blurOverlay.style.opacity = "0"
     }
@@ -81,12 +87,14 @@ function criaDetalhes(id) {
             document.body.classList.remove("sem-scroll")
         }, 500);
 
+        clearInterval(intervaloCarrossel)
+
         blurOverlay.style.pointerEvents = "none"
         blurOverlay.style.opacity = "0"
     }
 
     paginaProjeto.appendChild(h1)
-    paginaProjeto.appendChild(img)
+    paginaProjeto.appendChild(divCarrossel)
     paginaProjeto.appendChild(p)
     paginaProjeto.appendChild(p2)
     paginaProjeto.appendChild(links)
@@ -106,11 +114,79 @@ function criaDetalhes(id) {
     paginaProjeto.style.top = `${deslocamento}px`
 }
 
-function manipulaClick(evento) {
+function criaCarrossel(projeto) {
+    const divCarrossel = document.createElement("div")
+    divCarrossel.classList.add("div-carrossel")
+    const divBotoes = document.createElement("div")
+    divBotoes.classList.add("botoes-carrossel")
+
+    for (let index = 0; index < projeto.imagens.length; index++) {
+        const img = document.createElement("img")
+        img.src = projeto.imagens[index]
+        img.classList.add("imagem-carrossel")
+        if (index == 0) {
+            img.classList.add("ativa")
+        }
+        divCarrossel.appendChild(img)
+    }
+
+    if (projeto.imagens.length > 1) {
+        for (let index = 0; index < projeto.imagens.length; index++) {
+            const botao = document.createElement("button")
+            botao.classList.add("botao-carrossel")
+            if (index == 0) {
+                botao.classList.add("selecionado")
+            }
+            divBotoes.appendChild(botao)
+        }
+    }
+
+    divCarrossel.appendChild(divBotoes)
+
+    return divCarrossel
+}
+
+function abrirProjeto(evento) {
     const id = evento.currentTarget.dataset.id
 
     criaDetalhes(id)
     arrumaPosicao("pagina-projeto")
+    arrumaPosicao("botoes-carrossel")
+
+    const botoesCarrossel = document.querySelectorAll(".botao-carrossel")
+    const imagens = document.querySelectorAll(".imagem-carrossel")
+
+    botoesCarrossel.forEach((botao, indice) => {
+        botao.onclick = () => {
+            const botaoSelecionado = document.querySelector(".selecionado")
+            botaoSelecionado.classList.remove("selecionado")
+
+            botao.classList.add("selecionado")
+
+            const imagemAtiva = document.querySelector(".ativa")
+            imagemAtiva.classList.remove("ativa")
+
+            imagens[indice].classList.add("ativa")
+
+            arrumaPosicao("botoes-carrossel")
+        }
+    })
+
+    intervaloCarrossel = setInterval(() => {
+        const imagemAtual = document.querySelector(".ativa");
+        const indexAtual = Array.from(imagens).indexOf(imagemAtual);
+        const proximoIndex = (indexAtual + 1) % imagens.length;
+
+        const botaoSelecionado = document.querySelector(".selecionado");
+        botaoSelecionado.classList.remove("selecionado");
+
+        botoesCarrossel[proximoIndex].classList.add("selecionado");
+
+        imagemAtual.classList.remove("ativa");
+        imagens[proximoIndex].classList.add("ativa");
+
+        arrumaPosicao("botoes-carrossel");
+    }, 8000);
 
     document.body.classList.add("sem-scroll")
 

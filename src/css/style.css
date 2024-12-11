@@ -203,11 +203,19 @@ body.sem-scroll {
     box-shadow: 8px 8px 20px black;
 }
 
+.pagina-projeto ul {
+    margin: 0;
+}
+
+.pagina-projeto .links {
+    margin-bottom: 0;
+}
+
 .pagina-projeto.animacao {
     opacity: 1;
 }
 
-.pagina-projeto button {
+.pagina-projeto .fechar {
     position: absolute;
     left: 25px;
     top: 25px;
@@ -218,10 +226,48 @@ body.sem-scroll {
     cursor: pointer;
 }
 
-.pagina-projeto img {
-    max-width: 60%;
-    border: 5px solid white;
-    border-style: ridge;
+.pagina-projeto .div-carrossel {
+    height: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina-projeto .div-carrossel img {
+    height: 95%;
+    border: 5px ridge white;
+    display: none;
+}
+
+.pagina-projeto .div-carrossel .imagem-carrossel.ativa{
+    display: block;
+    animation: mudarImagem 0.7s;
+}
+
+.botoes-carrossel {
+    position: absolute;
+    top: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botoes-carrossel .botao-carrossel {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
+    transition: 0.5s;
+}
+
+.botoes-carrossel .botao-carrossel.selecionado {
+    background-color: #9443d8;
+}
+
+.botoes-carrossel .botao-carrossel:hover {
+    background-color: #9443d8;
 }
 
 .pagina-projeto h1 {
@@ -250,4 +296,14 @@ body.sem-scroll {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.5s ease;
+}
+
+@keyframes mudarImagem {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

@@ -2,7 +2,8 @@
     {
         "id": 0,
         "nome": "Portfólio IBMEC",
-        "imagem": "src/imagens/Simeutestei.png",
+        "imagem": "src/imagens/espaco.png",
+        "imagens": ["src/imagens/Simeutestei.png", "src/imagens/espaco.png", "src/imagens/espaco2.jpg", "src/imagens/rpg.png"],
         "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
         "info": "Esse projeto é um sistema feito por um grupo ao qual fiz parte durante o semestre de 2024.2. Era um grupo de 4 pessoas, que chamamos de BackStart, e o projeto foi feito como avaliação da disciplina Projeto Front-End da IBMEC, no segundo semestre de formação. Durante o projeto, tivemos que organizar um repositório no GitHub, que contava com diversas informações sobre o sistema, como os requisitos e casos de uso, além do próprio código. <br><br> O sistema foi feito inteiramente em React, utilizando uma base que o professor da disciplina havia nos fornecido. Foi um projeto um tanto quanto desafiador de ser terminado, pois ainda éramos iniciantes no mundo da programação e era nosso primeiro contato com o React, mas com o passar das semanas o grupo foi pegando o jeito e correu tudo bem. <br><br> O sistema conta com: <ul> <li>Paginação automática da página principal;</li> <li>Banco de dados interno que abriga todos os projetos;</li> <li>Página de detalhamento de projetos que é construída automaticamente com os dados de cada projeto;</li> <li>Tradução para inglês e português;</li> <li>Sistema de filtragem de projetos, tanto por nome escrito quanto por tópicos pré-definidos, como local e tecnologias;</li> <li>Sistema de login para um administrador.</li>",
         "links": "<li><a href='https://github.com/Eduardo-Peruzzo/BackStart' target='_blank'>Github do projeto</a></li> <li><a href='https://eduardo-peruzzo.github.io/BackStart/#/ target='_blank''>Site do sistema na internet</a></li>"
@@ -11,30 +12,40 @@
         "id": 1,
         "nome": "Projeto 2",
         "imagem": "src/imagens/Simeutestei.png",
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre."
+        "imagens": [],
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
+        "info": ""
     },
     {
         "id": 2,
         "nome": "Projeto 3",
         "imagem": "src/imagens/Simeutestei.png",
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre."
+        "imagens": [],
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
+        "info": ""
     },
     {
         "id": 3,
         "nome": "Projeto 4",
         "imagem": "src/imagens/Simeutestei.png",
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre."
+        "imagens": [],
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
+        "info": ""
     },
     {
         "id": 4,
         "nome": "Projeto 5",
         "imagem": "src/imagens/Simeutestei.png",
-        "desc": "Vai se foder"
+        "imagens": [],
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
+        "info": ""
     },
     {
         "id": 5,
         "nome": "Projeto 6",
         "imagem": "src/imagens/Simeutestei.png",
-        "desc": "Não aguento mais"
+        "imagens": ["src/imagens/Simeutestei.png"],
+        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
+        "info": "aaaaaaaaaaaa"
     }
 ]
