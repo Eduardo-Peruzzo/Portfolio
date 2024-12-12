@@ -110,6 +110,13 @@
     .pagina-projeto>h1 {
         font-size: 30px;
     }
+
+    .pagina-projeto .fechar {
+        position: relative;
+        top: 15px;
+        width: 98%;
+        text-align: left;
+    }
 }
 
 @media(max-width: 425px) {

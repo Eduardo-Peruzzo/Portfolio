@@ -94,12 +94,12 @@ function criaDetalhes(id) {
         blurOverlay.style.opacity = "0"
     }
 
+    paginaProjeto.appendChild(fechar)
     paginaProjeto.appendChild(h1)
     paginaProjeto.appendChild(divCarrossel)
     paginaProjeto.appendChild(p)
     paginaProjeto.appendChild(p2)
     paginaProjeto.appendChild(links)
-    paginaProjeto.appendChild(fechar)
 
     document.body.appendChild(paginaProjeto)
 
