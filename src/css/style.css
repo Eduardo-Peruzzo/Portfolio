@@ -318,3 +318,10 @@ body.sem-scroll {
         opacity: 1;
     }
 }
+
+.botao-carrossel,
+.fechar,
+.imagem-desc {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
