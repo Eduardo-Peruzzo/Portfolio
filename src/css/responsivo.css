@@ -22,9 +22,6 @@
 
     .projeto {
         width: 30em;
-    }
-
-    .projeto {
         transform: scale(1);
         opacity: 1;
         transition: 0.35s;
@@ -70,6 +67,8 @@
 
     .pagina-projeto {
         text-align: center;
+        width: 100%;
+        height: 100%;
     }
 
     .pagina-projeto li {
@@ -79,5 +78,25 @@
     .pagina-projeto .div-carrossel {
         max-width: 90%;
         height: 40%;
+    }
+}
+
+@media(max-width: 425px) {
+    .imagem>img {
+        width: 20em;
+        height: 20em;
+    }
+
+    .projeto {
+        width: 20em;
+    }
+
+    .projeto>h3 {
+        font-size: 30px;
+    }
+
+    .imagem-desc {
+        width: 15em;
+        height: 15em;
     }
 }
