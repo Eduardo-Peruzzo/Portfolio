@@ -11,13 +11,40 @@
 
     .info {
         width: 90%;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
         text-align: center;
     }
 
     .imagem>img {
         width: 25em;
         height: 25em;
+    }
+
+    .redes-sociais {
+        display: flex;
+        gap: 1.5em;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #textos {
+        position: relative;
+    }
+
+    #titulo-projetos {
+        font-size: 46px;
+    }
+
+    #mensagem {
+        display: block;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 100%;
+    }
+
+    #mensagem::after {
+        content: "(Clique em um projeto para ver seus detalhes)";
     }
 
     .projeto {
@@ -98,5 +125,9 @@
     .imagem-desc {
         width: 15em;
         height: 15em;
+    }
+
+    .pagina-projeto>h1 {
+        font-size: 30px;
     }
 }

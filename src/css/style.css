@@ -92,6 +92,10 @@ body.sem-scroll {
     margin-bottom: 2em;
 }
 
+#mensagem {
+    display: none;
+}
+
 .projetos {
     display: flex;
     align-items: center;
