@@ -2,50 +2,28 @@
     {
         "id": 0,
         "nome": "Portfólio IBMEC",
-        "imagem": "src/imagens/espaco.png",
-        "imagens": ["src/imagens/Simeutestei.png", "src/imagens/espaco.png", "src/imagens/espaco2.jpg", "src/imagens/rpg.png"],
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
-        "info": "Esse projeto é um sistema feito por um grupo ao qual fiz parte durante o semestre de 2024.2. Era um grupo de 4 pessoas, que chamamos de BackStart, e o projeto foi feito como avaliação da disciplina Projeto Front-End da IBMEC, no segundo semestre de formação. Durante o projeto, tivemos que organizar um repositório no GitHub, que contava com diversas informações sobre o sistema, como os requisitos e casos de uso, além do próprio código. <br><br> O sistema foi feito inteiramente em React, utilizando uma base que o professor da disciplina havia nos fornecido. Foi um projeto um tanto quanto desafiador de ser terminado, pois ainda éramos iniciantes no mundo da programação e era nosso primeiro contato com o React, mas com o passar das semanas o grupo foi pegando o jeito e correu tudo bem. <br><br> O sistema conta com: <ul> <li>Paginação automática da página principal;</li> <li>Banco de dados interno que abriga todos os projetos;</li> <li>Página de detalhamento de projetos que é construída automaticamente com os dados de cada projeto;</li> <li>Tradução para inglês e português;</li> <li>Sistema de filtragem de projetos, tanto por nome escrito quanto por tópicos pré-definidos, como local e tecnologias;</li> <li>Sistema de login para um administrador.</li>",
-        "links": "<li><a href='https://github.com/Eduardo-Peruzzo/BackStart' target='_blank'>Github do projeto</a></li> <li><a href='https://eduardo-peruzzo.github.io/BackStart/#/ target='_blank''>Site do sistema na internet</a></li>"
+        "imagem": "src/imagens/portfolio-ibmec/home.png",
+        "imagens": ["src/imagens/portfolio-ibmec/home.png", "src/imagens/portfolio-ibmec/home2.png", "src/imagens/portfolio-ibmec/home.png", "src/imagens/portfolio-ibmec/projeto.png", "src/imagens/portfolio-ibmec/projeto-eng.png", "src/imagens/portfolio-ibmec/filtros.png", "src/imagens/portfolio-ibmec/pesquisa.png"],
+        "desc": "Projeto feito na IBMEC, um site para servir de portfólio geral da universidade, feito em apenas um semestre.",
+        "info": "Esse projeto é um sistema feito por um grupo ao qual fiz parte durante o semestre de 2024.2. O projeto foi feito como avaliação da disciplina Projeto Front-End da IBMEC, no segundo semestre de formação. Durante a criação do projeto, tivemos que organizar um repositório no GitHub, que contava com diversas informações sobre o sistema, como os requisitos e casos de uso, além do próprio código. <br><br> O sistema foi feito inteiramente em React, utilizando uma base que o professor da disciplina havia nos fornecido. Foi um projeto um tanto quanto desafiador de ser terminado, pois ainda éramos iniciantes no mundo da programação e era nosso primeiro contato com o React, mas com o passar das semanas o grupo foi pegando o jeito e correu tudo bem. <br><br> O sistema conta com: <ul> <li>Paginação automática da página principal;</li> <li>Banco de dados interno que abriga todos os projetos;</li> <li>Página de detalhamento de projetos que é construída automaticamente com os dados de cada projeto;</li> <li>Tradução para inglês e português;</li> <li>Sistema de filtragem de projetos, tanto por nome escrito quanto por tópicos pré-definidos, como local e tecnologias;</li> <li>Sistema de login para um administrador.</li>",
+        "links": "<li><a href='https://github.com/Eduardo-Peruzzo/BackStart' target='_blank'>Github do projeto</a></li> <li><a href='https://eduardo-peruzzo.github.io/BackStart/#/' target='_blank'>Site do sistema na internet</a></li>"
     },
     {
         "id": 1,
-        "nome": "Projeto 2",
-        "imagem": "src/imagens/Simeutestei.png",
-        "imagens": [],
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
-        "info": ""
+        "nome": "Rogue",
+        "imagem": "src/imagens/rogue/jogo.png",
+        "imagens": ["src/imagens/rogue/jogo.png", "src/imagens/rogue/nome.png", "src/imagens/rogue/classe.png", "src/imagens/rogue/npc.png", "src/imagens/rogue/vitoria.png", "src/imagens/rogue/nether.png", "src/imagens/rogue/derrota.png"],
+        "desc": "Um pequeno jogo Roguelike feito inteiramente em Python utilizando a biblioteca pygame.",
+        "info": "Esse jogo foi feito para a avalização final da disciplina de Programação Estruturada, durante o primeiro semestre, 2024.1 do meu curso na IBMEC. O objetivo do projeto era utilizar a biblioteca pygame e aplicar nossos conhecimentos em Python para recriar um antigo jogo. <br><br> Por ser um programa criado enquanto era um iniciante no mundo da programação, é um jogo bem simples, mas conta com algumas mecânicas e sistemas interessantes: <ul> <li>Ao iniciar o jogo, o programa abre uma nova janela, onde o jogador escolherá o nome do seu aventureiro;</li> <li>O jogador pode escolher uma classe, que influencia em seus status iniciais;</li> <li>Cada vez que o jogador caminha no mapa, há uma chance de monstros aparecerem, e uma batalha ocorre automaticamente;</li> <li>Ao vencer de monstros, o jogador recebe XP e sobe de nível, aumentando seus status;</li> <li>O jogador pode interagir com um NPC, marcado no mapa como um &, que apenas responde com uma frase simples;</li> <li>O jogador pode encontrar uma poção, marcada no mapa como um %. Ao tomar a poção, ele recebe um bônus aleatório durante 10 segundos;</li> <li>Todas as ações e acontecimentos no jogo possuem um efeito sonoro próprio, além de uma trilha sonora de fundo;</li> <li>O jogador pode encontrar um portal para outra dimensão, marcada no mapa com um { }. Ao entrar nesse portal, um novo mapa é carregado, com monstros mais poderosos;</li> <li>O objetivo final do jogador é encontrar o tesouro, marcado no mapa com um X. Ao chegar no tesouro, o jogador enfrentará um chefe, e caso o derrote, ele vence o jogo.</li> </ul>",
+        "links": "<li><a href='https://github.com/Eduardo-Peruzzo/Rogue' target='_blank'>Github do projeto</a></li>"
     },
     {
         "id": 2,
-        "nome": "Projeto 3",
-        "imagem": "src/imagens/Simeutestei.png",
-        "imagens": [],
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
-        "info": ""
-    },
-    {
-        "id": 3,
-        "nome": "Projeto 4",
-        "imagem": "src/imagens/Simeutestei.png",
-        "imagens": [],
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
-        "info": ""
-    },
-    {
-        "id": 4,
-        "nome": "Projeto 5",
-        "imagem": "src/imagens/Simeutestei.png",
-        "imagens": [],
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
-        "info": ""
-    },
-    {
-        "id": 5,
-        "nome": "Projeto 6",
-        "imagem": "src/imagens/Simeutestei.png",
-        "imagens": ["src/imagens/Simeutestei.png"],
-        "desc": "Projeto feito na IBMEC para servir de portfólio geral da universidade, feito em apenas um semestre.",
-        "info": "aaaaaaaaaaaa"
+        "nome": "Sistema de cálculo numérico",
+        "imagem": "src/imagens/calculo/inicio.png",
+        "imagens": ["src/imagens/calculo/inicio.png", "src/imagens/calculo/valores.png", "src/imagens/calculo/resultado.png"],
+        "desc": "Um sistema capaz de reconhecer funções matemáticas e utilizar dois métodos de cálculo numérico para determinar o gráfico e as raízes da função.",
+        "info": "Esse sistema foi criado como parte da avaliação final da disciplina de Modelagem Computacional na IBMEC, no período 2024.2, com o objetivo de aplicar nossos conhecimentos de programação para auxiliar em cálculos complexos. O programa foi feito em HTML, CSS e JavaScript, com a adição de duas bilbiotecas do JavaScript: math.js e plotly.js. Tais bibliotecas nos permitiram fazer com que o programa reconhecesse e armazenasse funções escritas e enviadas pelo usuário, para que pudessem ser aplicadas em qualquer valor de X automaticamente. <br><br> O sistema conta com as seguintes funcionalidades: <ul> <li>Dois métodos diferentes de cálculo: Falsa-Posição e Secante, ambos provenientes dos estudos de cálculo numérico;</li> <li>O programa reconhece qual método foi selecionado para o cálculo, e insere os campos de input necessários para serem preenchidos;</li> <li>Ao clicar em 'Enviar valores', o programa utiliza o método selecionado e os valores enviados para calcular a raiz da função, e automaticamente fornece uma tabela de cada etapa do cálculo, que contém todos os valores das variáveis, além de desenhar o gráfico destacando a raiz encontrada;</li> <li>Caso os valores enviados pelo usuário sejam inválidos para o cálculo, o programa exibe uma mensagem de erro e não realiza o cálculo.</li></ul>",
+        "links": "<li><a href='https://github.com/Eduardo-Peruzzo/Modelagem-Computacional' target='_blank'>Github do projeto</a></li> <li><a href='https://eduardo-peruzzo.github.io/Modelagem-Computacional/' target='_blank'>Site do sistema na internet</a></li>"
     }
 ]

@@ -56,6 +56,7 @@ function criaDetalhes(id) {
     p2.classList.add("links")
 
     const links = document.createElement("ul")
+    links.classList.add("lista-links")
 
     const fechar = document.createElement("button")
     fechar.classList.add("fechar")

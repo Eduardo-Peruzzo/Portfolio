@@ -84,6 +84,7 @@ body.sem-scroll {
     width: 25em;
     height: 25em;
     border-radius: 50%;
+    border: 2px solid white;
 }
 
 #titulo-projetos {
@@ -104,8 +105,10 @@ body.sem-scroll {
 }
 
 .imagem-desc {
-    width: 15em;
-    height: 15em;
+    display: flex;
+    justify-content: center;
+    width: 17em;
+    height: 17em;
     border-radius: 50%;
     border: 3px solid white;
     overflow: hidden;
@@ -150,7 +153,7 @@ body.sem-scroll {
 }
 
 .imagem-desc>img {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
 }
 
@@ -211,6 +214,11 @@ body.sem-scroll {
     margin-bottom: 0;
 }
 
+.lista-links {
+    padding: 0;
+    padding-bottom: 15px;
+}
+
 .pagina-projeto.animacao {
     opacity: 1;
 }
@@ -256,9 +264,8 @@ body.sem-scroll {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 2px solid black;
     cursor: pointer;
-    border-color: #ffffff;
     transition: 0.5s;
 }
 
