@@ -106,6 +106,10 @@
         max-width: 90%;
         height: 40%;
     }
+
+    .pagina-projeto>h1 {
+        font-size: 30px;
+    }
 }
 
 @media(max-width: 425px) {
