@@ -37,6 +37,8 @@ function criaProjeto(projeto) {
 }
 
 function criaDetalhes(id) {
+    history.pushState({ modalOpen: true }, "");
+
     let projetoFiltrado
     projetoFiltrado = projetos.filter((projeto) => projeto.id == id)
     projetoFiltrado = projetoFiltrado[0]
@@ -69,29 +71,17 @@ function criaDetalhes(id) {
     fechar.innerHTML = "x"
 
     fechar.onclick = () => {
-        paginaProjeto.style.opacity = 0
-        setTimeout(() => {
-            document.body.removeChild(paginaProjeto)
-            document.body.classList.remove("sem-scroll")
-        }, 500);
-
-        clearInterval(intervaloCarrossel)
-
-        blurOverlay.style.pointerEvents = "none"
-        blurOverlay.style.opacity = "0"
+        if (paginaProjeto) {
+            fecharPaginaProjeto(paginaProjeto, blurOverlay);
+        }
+        // fecharPaginaProjeto(paginaProjeto, blurOverlay)
     }
 
     blurOverlay.onclick = () => {
-        paginaProjeto.style.opacity = 0
-        setTimeout(() => {
-            document.body.removeChild(paginaProjeto)
-            document.body.classList.remove("sem-scroll")
-        }, 500);
-
-        clearInterval(intervaloCarrossel)
-
-        blurOverlay.style.pointerEvents = "none"
-        blurOverlay.style.opacity = "0"
+        if (paginaProjeto) {
+            fecharPaginaProjeto(paginaProjeto, blurOverlay);
+        }
+        // fecharPaginaProjeto(paginaProjeto, blurOverlay)
     }
 
     paginaProjeto.appendChild(fechar)
@@ -196,6 +186,23 @@ function abrirProjeto(evento) {
     blurOverlay.style.opacity = "1"
 }
 
+function fecharPaginaProjeto(paginaProjeto, blurOverlay) {
+    paginaProjeto.style.opacity = 0
+    setTimeout(() => {
+        document.body.removeChild(paginaProjeto)
+        document.body.classList.remove("sem-scroll")
+    }, 500);
+
+    clearInterval(intervaloCarrossel)
+
+    blurOverlay.style.pointerEvents = "none"
+    blurOverlay.style.opacity = "0"
+
+    if (history.state && history.state.modalOpen) {
+        history.back();
+    }
+}
+
 function arrumaPosicao(classe) {
     const elementos = document.querySelectorAll(`.${classe}`)
 
@@ -217,4 +224,13 @@ fetch("projetos.json").then((resposta) => {
         projetos = dados
         arrumaPosicao("desc")
     })
+});
+
+window.addEventListener("popstate", (event) => {
+    const paginaProjeto = document.querySelector(".pagina-projeto");
+    const blurOverlay = document.querySelector(".blur-overlay");
+
+    if (paginaProjeto) {
+        fecharPaginaProjeto(paginaProjeto, blurOverlay);
+    }
 });
